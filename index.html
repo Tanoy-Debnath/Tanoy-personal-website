@@ -1,60 +1,102 @@
-<!-- Tri AI Solution Website -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Tri AI Solution</title>
+    <title>Debnath Tanoy | Machine Learning Engineer</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Debnath Tanoy - Machine Learning Engineer, Researcher, SaaS & LLM Specialist">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
     <style>
-        body { font-family: Arial, sans-serif; margin: 0; background: #f6f8fa; }
-        header { background: #222; color: #fff; padding: 2rem 1rem; text-align: center; }
-        .container { max-width: 800px; margin: 2rem auto; background: #fff; padding: 2rem; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.05);}
-        h1, h2 { color: #222; }
-        .profile { display: flex; align-items: center; gap: 2rem; }
-        .profile img { width: 120px; border-radius: 50%; border: 2px solid #eee; }
-        .contact { background: #eaf5ff; padding: 1rem; border-radius: 6px; margin-top: 2rem; }
-        .cta { background: #0078d4; color: #fff; padding: 1rem; border-radius: 6px; text-align: center; margin-top: 2rem; }
-        a.button { background: #0078d4; color: #fff; padding: 0.75rem 1.5rem; border-radius: 4px; text-decoration: none; font-weight: bold; }
-        ul { margin: 1rem 0; }
+        body { font-family: 'Montserrat', Arial, sans-serif; margin: 0; background: #f4f7fa; color: #222; }
+        header { background: linear-gradient(90deg, #0078d4 60%, #00c6fb 100%); color: #fff; padding: 2.5rem 1rem 1.5rem 1rem; text-align: center; }
+        .container { max-width: 900px; margin: 2rem auto; background: #fff; padding: 2.5rem; border-radius: 12px; box-shadow: 0 4px 24px rgba(0,0,0,0.07);}
+        h1 { font-size: 2.5rem; margin-bottom: 0.5rem; }
+        h2 { color: #0078d4; margin-top: 2rem; }
+        .profile { display: flex; align-items: center; gap: 2rem; margin-bottom: 2rem; }
+        .profile img { width: 140px; border-radius: 50%; border: 3px solid #eee; box-shadow: 0 2px 8px rgba(0,0,0,0.08);}
+        .summary { font-size: 1.15rem; margin-bottom: 1.5rem; }
+        .about { background: #eaf5ff; padding: 1.2rem; border-radius: 8px; margin-bottom: 2rem; }
+        ul.accomplishments { margin: 1.5rem 0; padding-left: 1.2rem; }
+        ul.accomplishments li { margin-bottom: 1.1rem; line-height: 1.6; }
+        .publications { margin-top: 2rem; }
+        .publications ul { padding-left: 1.2rem; }
+        .publications li { margin-bottom: 1rem; }
+        .contact { background: #eaf5ff; padding: 1.2rem; border-radius: 8px; margin-top: 2.5rem; }
+        .contact a { color: #0078d4; text-decoration: none; font-weight: bold; }
+        .cta { background: #0078d4; color: #fff; padding: 1.2rem; border-radius: 8px; text-align: center; margin-top: 2.5rem; }
+        .cta a.button { background: #fff; color: #0078d4; padding: 0.8rem 2rem; border-radius: 4px; text-decoration: none; font-weight: bold; border: 2px solid #fff; transition: background 0.2s, color 0.2s;}
+        .cta a.button:hover { background: #0078d4; color: #fff; border: 2px solid #fff;}
+        @media (max-width: 700px) {
+            .container { padding: 1rem; }
+            .profile { flex-direction: column; align-items: flex-start; }
+            .profile img { width: 100px; }
+        }
     </style>
 </head>
 <body>
     <header>
-        <h1>Tri AI Solution</h1>
-        <p>Your Partner for AI Innovation & Solutions</p>
+        <h1>Debnath Tanoy</h1>
+        <p>Machine Learning Engineer | Researcher | SaaS & LLM Specialist</p>
     </header>
     <div class="container">
         <section class="profile">
-            <img src="profile.jpg" alt="Your Profile Photo">
+            <img src="profile.jpg" alt="Debnath Tanoy Photo">
             <div>
-                <h2>Debnath Tanoy</h2>
-                <p>AI Consultant | Data Scientist | ML Engineer</p>
-                <p>
-                    Experienced in delivering AI solutions for businesses. Specialized in Machine Learning, Deep Learning, NLP, Computer Vision, and Data Analytics.
-                </p>
+                <div class="about">
+                    <strong>About Me</strong><br>
+                    Machine learning Engineer with experience in research and building scalable ML systems, large language models, and SaaS-based reinforcement learning software products. Proficient in Python, FastAPI, and Azure, with hands-on deployment of python-based AI control models on Azure CI/CD & knowledge about software regulatory compliance (EU AI Act). Professional desire is to solve complex engineering challenges and contribute to production-ready ML systems (MLOps).
+                </div>
+                <div>
+                    <strong>Location:</strong> Tokyo, Japan<br>
+                    <strong>Email:</strong> <a href="mailto:kuettanoydebnath@gmail.com">kuettanoydebnath@gmail.com</a>
+                </div>
             </div>
         </section>
         <section>
-            <h2>Services Offered</h2>
+            <h2>Key Accomplishments</h2>
+            <ul class="accomplishments">
+                <li>Developed & optimized scalable ML systems for reinforcement learning-based industrial SaaS platform; reduced training time by <strong>49%</strong> on 300k+ samples using Sherman–Morrison optimization, reducing matrix inverse complexity.</li>
+                <li>Designed & researched LLM-based AI agents using open-source LLMs (<strong>GPT, BERT, LangChain, Hugging Face</strong>) to autonomously optimize reinforcement learning training via reward shaping and hyperparameter tuning for SaaS control models.</li>
+                <li>Evaluated distributed GPU environments (<strong>Azure Tesla T4 vs. on-prem Hyper-V</strong>), achieving <strong>40% faster training</strong> via CUDA-optimized TensorFlow and batch tuning.</li>
+                <li>Improved platform reliability from <strong>72% → 95%</strong> uptime on Azure SaaS deployments through modular backend and fault-tolerant execution pathways.</li>
+                <li>Designed and developed uncertainty-aware AI models for molecular odor prediction using odor molecular dataset & different molecular featurization including <strong>GNN</strong>.</li>
+                <li>Developed a <strong>FastAPI-based ML pipeline</strong> for battery RUL prediction, achieving <strong>&lt;4% RMSE</strong> and <strong>R² &gt; 0.91</strong>, with CI/CD automation using GitHub Actions and Docker.</li>
+            </ul>
+        </section>
+        <section class="publications">
+            <h2>Selected Publications</h2>
             <ul>
-                <li>Custom AI Model Development</li>
-                <li>Data Analysis & Visualization</li>
-                <li>Natural Language Processing (NLP)</li>
-                <li>Computer Vision Solutions</li>
-                <li>AI Consulting & Strategy</li>
-                <li>Automation & Predictive Analytics</li>
+                <li>
+                    T. Debnath, K. Oishi and A. Nakabayashi, "Mondrian inductive conformal classifier for the quantitative structure–odor relationship to estimate prediction confidence," 2024 IEEE International Symposium on Olfaction and Electronic Nose (ISOEN), Grapevine, TX, USA, 2024.
+                </li>
+                <li>
+                    Debnath T, Badreddine S, Kumari P, Spranger M, ‘Comparing molecular representations, e-nose signals, and other featurization, for learning to smell aroma molecules’, PLoS ONE (2023)
+                </li>
+                <li>
+                    Debnath, T., Nakamoto, T. ‘Extraction of sensing data for desired scent impressions using mass spectra of odorant molecules’, Scientific Report 12, 16297 (2022).
+                </li>
+                <li>
+                    Debnath, T., Nakamoto, T. ‘Predicting individual perceptual scent impression from imbalanced dataset using mass spectrum of odorant molecules’, Scientific Report 12, 3778 (2022).
+                </li>
+                <li>
+                    T. Debnath, Dani Prasetyawan, Takamichi Nakamoto, Predicting Odor perception of mixed scent from mass spectrometry using machine learning’, Journal of Electrochemical Society, 2021.
+                </li>
+                <li>
+                    T. Debnath, Takamichi Nakamoto; Predicting human odor perception represented by continuous values from mass spectra of essential oils resembling chemical mixtures; PLoS One, 2020
+                </li>
             </ul>
         </section>
         <section class="cta">
-            <h2>Looking for an AI Expert?</h2>
-            <p>Hire Tri AI Solution for your next project and unlock the power of Artificial Intelligence!</p>
+            <h2>Let's Connect!</h2>
+            <p>I'm open to new opportunities and collaborations in AI, ML, SaaS, and research. Reach out to discuss how I can help your team innovate.</p>
             <a class="button" href="mailto:kuettanoydebnath@gmail.com">Contact Me</a>
         </section>
         <section class="contact">
-            <h2>Contact</h2>
+            <h2>Contact & Social</h2>
             <p>Email: <a href="mailto:kuettanoydebnath@gmail.com">kuettanoydebnath@gmail.com</a></p>
-            <p>LinkedIn: <a href="https://www.linkedin.com/in/your-linkedin">your-linkedin</a></p>
+            <p>LinkedIn: <a href="https://www.linkedin.com/in/tanoy-debnath/">tanoy-debnath</a></p>
+            <p>GitHub: <a href="https://github.com/Tanoy-Debnath">Tanoy-Debnath</a></p>
         </section>
     </div>
 </body>
-</html></html>
+</html>

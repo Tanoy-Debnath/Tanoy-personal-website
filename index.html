@@ -14,6 +14,9 @@
       --secondary: #00c6fb;
       --text: #222;
       --bg: #f7faff;
+      --card-bg: #fff;
+      --card-shadow: 0 2px 10px rgba(0,0,0,0.07);
+      --accent: #ffb347;
     }
     body {
       font-family: 'Poppins', sans-serif;
@@ -74,7 +77,7 @@
       background: #fff;
       border-radius: 12px;
       padding: 2rem;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      box-shadow: var(--card-shadow);
       line-height: 1.7;
     }
     .skills {
@@ -86,7 +89,7 @@
       background: #fff;
       border-radius: 12px;
       padding: 1.5rem;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      box-shadow: var(--card-shadow);
     }
     .progress-bar {
       background: #e3eaf0;
@@ -101,16 +104,72 @@
       width: 0;
       transition: width 1.2s ease-in-out;
     }
-    .experience ul, .publications ul {
+    .experience ul {
       list-style: none;
       padding: 0;
     }
-    .experience li, .publications li {
+    .experience li {
       background: #fff;
       padding: 1rem 1.2rem;
       border-radius: 10px;
       margin-bottom: 1rem;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      box-shadow: var(--card-shadow);
+    }
+    .publications-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    .publication-card {
+      background: var(--card-bg);
+      border-radius: 14px;
+      box-shadow: var(--card-shadow);
+      padding: 1.2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transition: box-shadow 0.2s;
+      min-height: 420px;
+    }
+    .publication-card:hover {
+      box-shadow: 0 6px 24px rgba(0,0,0,0.12);
+    }
+    .publication-img {
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 1rem;
+      border: 2px solid var(--accent);
+      background: #f3f3f3;
+    }
+    .publication-title {
+      font-size: 1.05rem;
+      font-weight: 600;
+      margin-bottom: 0.7rem;
+      text-align: center;
+      color: var(--primary);
+    }
+    .publication-authors {
+      font-size: 0.95rem;
+      color: #555;
+      margin-bottom: 0.5rem;
+      text-align: center;
+    }
+    .publication-link {
+      margin-top: 1rem;
+      display: inline-block;
+      background: var(--primary);
+      color: #fff;
+      padding: 0.5rem 1.2rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: background 0.2s;
+    }
+    .publication-link:hover {
+      background: var(--secondary);
     }
     footer {
       text-align: center;
@@ -193,11 +252,92 @@
 
   <section id="publications" data-aos="fade-up">
     <h2>Selected Publications</h2>
-    <ul class="publications">
-      <li>Debnath T, Oishi K, Nakabayashi A. "Mondrian inductive conformal classifier for quantitative structure–odor relationship." <i>IEEE ISOEN 2024</i>.</li>
-      <li>Debnath T, Badreddine S, Kumari P, Spranger M. "Comparing molecular representations and e-nose signals for learning aroma molecules." <i>PLoS ONE 2023</i>.</li>
-      <li>Debnath T, Nakamoto T. "Extraction of sensing data for desired scent impressions using mass spectra." <i>Scientific Reports 2022</i>.</li>
-    </ul>
+    <div class="publications-grid">
+      <!-- Publication 1 -->
+      <div class="publication-card">
+        <img class="publication-img" src="pub1.jpg" alt="Mondrian inductive conformal classifier">
+        <div class="publication-title">
+          Mondrian inductive conformal classifier for the quantitative structure–odor relationship to estimate prediction confidence
+        </div>
+        <div class="publication-authors">
+          T. Debnath, K. Oishi, A. Nakabayashi<br>
+          <i>IEEE ISOEN 2024</i>
+        </div>
+        <a class="publication-link" href="https://ieeexplore.ieee.org/document/10555997/" target="_blank">
+          View Publication
+        </a>
+      </div>
+      <!-- Publication 2 -->
+      <div class="publication-card">
+        <img class="publication-img" src="pub2.jpg" alt="Comparing molecular representations, e-nose signals">
+        <div class="publication-title">
+          Comparing molecular representations, e-nose signals, and other featurization, for learning to smell aroma molecules
+        </div>
+        <div class="publication-authors">
+          T. Debnath, S. Badreddine, P. Kumari, M. Spranger<br>
+          <i>PLoS ONE 2023</i>
+        </div>
+        <a class="publication-link" href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0289881" target="_blank">
+          View Publication
+        </a>
+      </div>
+      <!-- Publication 3 -->
+      <div class="publication-card">
+        <img class="publication-img" src="pub3.jpg" alt="Extraction of sensing data for desired scent impressions">
+        <div class="publication-title">
+          Extraction of sensing data for desired scent impressions using mass spectra of odorant molecules
+        </div>
+        <div class="publication-authors">
+          T. Debnath, T. Nakamoto<br>
+          <i>Scientific Reports 2022</i>
+        </div>
+        <a class="publication-link" href="https://www.nature.com/articles/s41598-022-20388-0" target="_blank">
+          View Publication
+        </a>
+      </div>
+      <!-- Publication 4 -->
+      <div class="publication-card">
+        <img class="publication-img" src="pub4.jpg" alt="Predicting individual perceptual scent impression">
+        <div class="publication-title">
+          Predicting individual perceptual scent impression from imbalanced dataset using mass spectrum of odorant molecules
+        </div>
+        <div class="publication-authors">
+          T. Debnath, T. Nakamoto<br>
+          <i>Scientific Reports 2022</i>
+        </div>
+        <a class="publication-link" href="https://www.nature.com/articles/s41598-022-07802-3" target="_blank">
+          View Publication
+        </a>
+      </div>
+      <!-- Publication 5 -->
+      <div class="publication-card">
+        <img class="publication-img" src="pub5.jpg" alt="Predicting Odor perception of mixed scent">
+        <div class="publication-title">
+          Predicting Odor perception of mixed scent from mass spectrometry using machine learning
+        </div>
+        <div class="publication-authors">
+          T. Debnath, D. Prasetyawan, T. Nakamoto<br>
+          <i>Journal of Electrochemical Society 2021</i>
+        </div>
+        <a class="publication-link" href="https://iopscience.iop.org/article/10.1149/1945-7111/ac33e0" target="_blank">
+          View Publication
+        </a>
+      </div>
+      <!-- Publication 6 -->
+      <div class="publication-card">
+        <img class="publication-img" src="pub6.jpg" alt="Predicting human odor perception from mass spectra">
+        <div class="publication-title">
+          Predicting human odor perception represented by continuous values from mass spectra of essential oils resembling chemical mixtures
+        </div>
+        <div class="publication-authors">
+          T. Debnath, T. Nakamoto<br>
+          <i>PLoS ONE 2020</i>
+        </div>
+        <a class="publication-link" href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0234688" target="_blank">
+          View Publication
+        </a>
+      </div>
+    </div>
   </section>
 
   <footer id="contact">
@@ -214,6 +354,12 @@
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
     AOS.init({ duration: 900, once: true });
+    // Animate progress bars
+    window.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('.progress').forEach(bar => {
+        bar.style.width = bar.style.width;
+      });
+    });
   </script>
 </body>
 </html>
